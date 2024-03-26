@@ -1,0 +1,41 @@
+#cluster-map {
+    height: 100vh; /* Adjust if needed */
+    width: 250%; /* This ensures that the map uses all the horizontal space */
+}
+
+/* Removes padding and margin from rows and columns */
+.row, .row > [class^="col-"] {
+    padding: 0;
+    margin: 0;
+}
+
+/* Optional: Additional styling for the cards or any other elements */
+.card {
+    margin: 0 15px 15px 15px; /* Add some space between cards */
+}
+
+.image-container {
+    height: 200px; /* Fixed height for all images */
+    overflow: hidden; /* Ensures that the images don't break out of their container */
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+}
+
+.dog-park-image {
+    width: auto; /* Auto-scale the width */
+    max-width: 100%; /* Ensure it doesn't get bigger than its container */
+    max-height: 100%; /* Ensure it doesn't get taller than its container */
+    object-fit: cover; /* Cover the container while keeping aspect ratio */
+}
+
+.average-rating {
+    font-weight: bold;
+    color: #FFA534; /* Or any color you prefer */
+}
+
+.review-count {
+    font-size: 0.8rem;
+    color: #777;
+}
+

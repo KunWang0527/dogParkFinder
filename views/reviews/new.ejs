@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate') %>
+<h1>Write a Review for <%= dogPark.title %></h1>
+<form action="/dogParks/<%= dogPark._id %>/reviews" method="POST" enctype="multipart/form-data">
+    <div>
+        <label for="rating">Rating</label>
+        <select name="review[rating]" id="rating" required>
+            <option value="">Select a rating</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+    </div>
+    <div>
+        <label for="reviewBody">Review</label>
+        <textarea name="review[body]" id="reviewBody" required></textarea>
+    </div>
+    <div>
+        <label for="image">Photo</label>
+        <input type="file" name="image" id="image" accept="image/*" multiple>
+    </div>
+    <button type="submit">Submit Review</button>
+</form>
